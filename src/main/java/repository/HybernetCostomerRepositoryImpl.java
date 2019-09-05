@@ -8,6 +8,10 @@ import java.util.List;
 public class HybernetCostomerRepositoryImpl implements HybernetCostomerRepository {
     private Customer customer;
 
+    public HybernetCostomerRepositoryImpl(Customer customer) {
+        this.customer = customer;
+    }
+
     @Override
     public List<Customer> findAll() {
         List<Customer> customers = new ArrayList<>();
@@ -17,8 +21,5 @@ public class HybernetCostomerRepositoryImpl implements HybernetCostomerRepositor
         return customers;
     }
 
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
-    }
 }
 

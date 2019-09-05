@@ -7,10 +7,10 @@
     <bean name="customer" class="model.Customer"/>
 
     <bean name="customerRepository" class="repository.HybernetCostomerRepositoryImpl">
-        <property name="customer" ref="customer"/>
+        <constructor-arg index="0" ref="customer"/>
     </bean>
 
     <bean name="customerService" class="service.CustomerServiceImpl">
-        <property name="hybernetCostomerRepository" ref="customerRepository"/>
+        <constructor-arg index="0" ref="customerRepository"/>
     </bean>
 </beans>

@@ -6,10 +6,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class HybernetCostomerRepositoryImpl implements HybernetCostomerRepository {
+
     private Customer customer;
 
-    public HybernetCostomerRepositoryImpl(Customer customer) {
+    public void setCustomer(Customer customer) {
         this.customer = customer;
+    }
+
+    public HybernetCostomerRepositoryImpl() {
     }
 
     @Override

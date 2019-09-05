@@ -5,6 +5,6 @@
     http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean name="customer" class="model.Customer"/>
-    <bean name="customerRepository" class="repository.HybernetCostomerRepositoryImpl" autowire="constructor"/>
-    <bean name="customerService" class="service.CustomerServiceImpl" autowire="constructor"/>
+    <bean name="customerRepository" class="repository.HybernetCostomerRepositoryImpl" autowire="byType"/>
+    <bean name="customerService" class="service.CustomerServiceImpl" autowire="byType"/>
 </beans>

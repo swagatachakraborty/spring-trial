@@ -7,9 +7,6 @@ public class Customer {
     private String firstName;
     private String lastName;
 
-    public Customer() {
-    }
-
     public String getFirstName() {
         return firstName;
     }

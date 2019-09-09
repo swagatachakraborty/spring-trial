@@ -11,9 +11,6 @@ import java.util.List;
 public class CustomerServiceImpl implements CustomerService {
     private HybernetCostomerRepository hybernetCostomerRepository;
 
-    public CustomerServiceImpl() {
-    }
-
     @Override
     public List<Customer> findAll(){
         return hybernetCostomerRepository.findAll();

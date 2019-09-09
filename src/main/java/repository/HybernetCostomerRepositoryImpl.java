@@ -10,7 +10,6 @@ import java.util.List;
 @Repository("HybernetCostomerRepository")
 public class HybernetCostomerRepositoryImpl implements HybernetCostomerRepository {
 
-    @Autowired
     private Customer customer;
 
     @Override
@@ -22,5 +21,9 @@ public class HybernetCostomerRepositoryImpl implements HybernetCostomerRepositor
         return customers;
     }
 
+    @Autowired
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
 }
 

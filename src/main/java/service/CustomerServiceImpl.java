@@ -9,7 +9,6 @@ import java.util.List;
 
 @Service("customerService")
 public class CustomerServiceImpl implements CustomerService {
-    @Autowired
     private HybernetCostomerRepository hybernetCostomerRepository;
 
     public CustomerServiceImpl() {
@@ -20,4 +19,8 @@ public class CustomerServiceImpl implements CustomerService {
         return hybernetCostomerRepository.findAll();
     }
 
+    @Autowired
+    public void setHybernetCostomerRepository(HybernetCostomerRepository hybernetCostomerRepository) {
+        this.hybernetCostomerRepository = hybernetCostomerRepository;
+    }
 }

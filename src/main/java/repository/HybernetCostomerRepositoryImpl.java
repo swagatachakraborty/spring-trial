@@ -12,6 +12,11 @@ public class HybernetCostomerRepositoryImpl implements HybernetCostomerRepositor
 
     private Customer customer;
 
+    @Autowired
+    public HybernetCostomerRepositoryImpl(Customer customer) {
+        this.customer = customer;
+    }
+
     @Override
     public List<Customer> findAll() {
         List<Customer> customers = new ArrayList<>();
@@ -21,9 +26,5 @@ public class HybernetCostomerRepositoryImpl implements HybernetCostomerRepositor
         return customers;
     }
 
-    @Autowired
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
-    }
 }
 

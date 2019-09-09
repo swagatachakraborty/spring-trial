@@ -11,13 +11,14 @@ import java.util.List;
 public class CustomerServiceImpl implements CustomerService {
     private HybernetCostomerRepository hybernetCostomerRepository;
 
+    @Autowired
+    public CustomerServiceImpl(HybernetCostomerRepository hybernetCostomerRepository) {
+        this.hybernetCostomerRepository = hybernetCostomerRepository;
+    }
+
     @Override
     public List<Customer> findAll(){
         return hybernetCostomerRepository.findAll();
     }
 
-    @Autowired
-    public void setHybernetCostomerRepository(HybernetCostomerRepository hybernetCostomerRepository) {
-        this.hybernetCostomerRepository = hybernetCostomerRepository;
-    }
 }
